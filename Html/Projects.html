@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Majdi Ghorbel</title>
+  <link rel="stylesheet" href="../CSS/Projects.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="../img/ME.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/Html/home.html" class="logo">Portfoli <span>.O</span></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navlist" id="navlist">
+      <li><a href="../Html/home.html">Home</a></li>
+      <li><a href="../Html/About.html">A Propos</a></li>
+      <li><a href="../Html/Internships.html">Expériences Professionnelles</a></li>
+      <li><a href="../Html/Skills.html">Compétences</a></li>
+      <li><a href="../Html/Projects.html" class="active-nav">Projets</a></li>
+      <li><a href="../Html/Interests.html">Intérêts</a></li>
+    </ul>
+  </header>
+
+  <section class="projects-section">
+    <div class="projects-header">
+      <h1>My Projects</h1>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Projet 1 -->
+      <div class="timeline-item">
+        <div class="timeline-images">
+          <img src="../img/p1.jpg" alt="Projet 1" class="timeline-image">
+          <img src="../img/p2.jpg" alt="Projet 1" class="timeline-image">
+          <img src="../img/p3.jpg" alt="Projet 1" class="timeline-image">
+          <img src="../img/p4.jpg" alt="Projet 1" class="timeline-image">
+          <img src="../img/p5.jpg" alt="Projet 1" class="timeline-image">
+        </div>
+
+        <div class="timeline-content">
+          <h3>CONVOYEUR SEMI AUTOMATIQUE DES PANNEAUX</h3>
+          <p>Déterminer les opérations de transport et déchargement automatique des panneaux à la sortie de la plaqueuse de chants.</p>
+          <p>Dans le cadre de ce projet, réalisé avec l’ISET Sfax et MGSM, nous avons mené une recherche bibliographique, une étude technique, la conception et la simulation d’un convoyeur à bande. L’objectif est de concevoir un système automatisé permettant le transport et le déchargement des panneaux à la sortie de la plaqueuse de chants. Ce système devra assurer un transfert fluide, précis et en continu, tout en réduisant l’intervention humaine et en améliorant l’efficacité de la chaîne de production.</p>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="timeline-item">
+        <div class="timeline-images">
+          <img src="../img/p6.jpg" alt="Projet 2" class="timeline-image">
+          <img src="../img/p7.jpg" alt="Projet 2" class="timeline-image">
+        </div>
+
+        <div class="timeline-content">
+          <h3>Escaliers et plateformes industrielles</h3>
+          <p>Dans une usine de recyclage, les escaliers et plateformes facilitent la circulation du personnel et assurent la sécurité. J’ai conçu des solutions robustes avec SolidWorks et AutoCAD, conformes aux normes industrielles.</p>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="timeline-item">
+        <div class="timeline-images">
+          <img src="../img/p8.jpg" alt="Projet 3" class="timeline-image">
+          <img src="../img/p9.jpg" alt="Projet 3" class="timeline-image">
+          <img src="../img/p10.jpg" alt="Projet 3" class="timeline-image">
+        </div>
+
+        <div class="timeline-content">
+          <h3>Ambiance d’un bureau et mise en valeur d'une lampe de chevet</h3>
+          <h4>Scènes 3D sous Blender</h4>
+          <p>Projet de scénographie virtuelle sous Blender : travail sur la lumière, l’environnement et la narration visuelle. Une expérience qui m’a poussé à m’intéresser davantage à l’animation 3D et aux univers immersifs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuIcon = document.getElementById('menu-icon');
+      const navList = document.getElementById('navlist');
+
+      if (menuIcon && navList) {
+        menuIcon.addEventListener('click', function() {
+          this.classList.toggle('bx-x');
+          navList.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+
+        document.querySelectorAll('.navlist a').forEach(link => {
+          link.addEventListener('click', function() {
+            menuIcon.classList.remove('bx-x');
+            navList.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+          });
+        });
+      }
+    });
+
+    // Désactiver clic droit
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+
+    // Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

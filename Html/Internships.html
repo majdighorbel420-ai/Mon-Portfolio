@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Majdi GHORBEL</title>
+  <link rel="stylesheet" href="../CSS/About.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="icon" href="../img/ME.png" type="image/x-icon">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Styles spécifiques pour la page d'accueil */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 0 7%;
+      position: relative;
+      gap: 3rem;
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 1000px;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .profile-portrait {
+      width: 350px;
+      height: 350px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 5px solid var(--main-color);
+      box-shadow: 0 20px 50px rgba(19, 187, 255, 0.2);
+      transform: perspective(1000px) rotateY(-10deg);
+      transition: all 0.5s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-portrait:hover {
+      transform: perspective(1000px) rotateY(0deg);
+      box-shadow: 0 25px 60px rgba(19, 187, 255, 0.3);
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, var(--main-color), transparent);
+      top: -20px;
+      left: -20px;
+      z-index: 0;
+      opacity: 0.3;
+      animation: pulse 8s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.3; }
+      100% { transform: scale(1.05); opacity: 0.5; }
+    }
+
+    /* Animation du texte */
+    .hero h4 {
+      font-size: 1.6rem;
+      color: var(--main-color);
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 1rem 0;
+      line-height: 1.2;
+      background: linear-gradient(to right, var(--main-color), #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      color: var(--other-color);
+      animation: fadeInUp 1s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .profile-portrait {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+      }
+      .hero-content {
+        order: 2;
+      }
+      .hero-image {
+        order: 1;
+        margin-bottom: 3rem;
+      }
+      .profile-portrait {
+        width: 250px;
+        height: 250px;
+      }
+      .hero-image::before {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero h4 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Portfoli <span>.O</span></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navlist" id="navlist">
+      <li><a href="../Html/home.html">Home</a></li>
+      <li><a href="../Html/About.html">A Propos</a></li>
+      <li><a href="../Html/Internships.html" class="active-nav">Expériences Professionnelles</a></li>
+      <li><a href="../Html/Skills.html">Compétences</a></li>
+      <li><a href="../Html/Projects.html">Projets</a></li>
+      <li><a href="../Html/Interests.html">Intérêts</a></li>
+    </ul>
+  </header>
+
+  <section id="internships">
+    <br><br><br><br>
+    <h2>Mes Expériences Professionnelles</h2>
+    <div class="timeline">
+
+      <!-- Stage 2024 -->
+      <div class="timeline-item">
+        <img src="../img/OEM.jpg" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>08/2024 – 01/2025</h3>
+          <h4>Technicien Supérieur</h4>
+          <p><strong> OEM Engineering</strong></p>
+          <p> Conception de modèles en 3D des machines spéciales pour le
+            tri de déchets et réalisation de plans 2D en utilisant le logiciel
+            Solid-Works et ZW-CAD.
+            </p>
+        </div>
+      </div>
+
+      <!-- Stage 2023 -->
+      <div class="timeline-item">
+        <img src="../img/techno.jpg" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>01/2024 – 07/2024</h3>
+          <h4>Technicien Supérieur</h4>
+          <p><strong>Techno confort</strong></p>
+          <!-- <p>Designed and implemented a media management application to streamline social media publication workflows for LinkedIn and Facebook. The solution included collaborative validation processes between team members and automated scheduling features.</p> -->
+          <ul class="accomplishments">
+            <li> Conception de modèles en 3D de meubles et réalisation de plans 2D en utilisant le logiciel Solid-Works.</li>
+            <li>Programmation de la défonceuse numérique à l'aide du logiciel AlphaCam.</li> 
+            <li> Suivi de la production à l'aide d'un système ERP.</li>
+            <li> Réalisation des tâches de maintenance.</li>
+
+          </ul>
+          <!-- <div class="tech-tags">
+            <span>Power Apps</span>
+            <span>Power Automate</span>
+            <span>SharePoint</span>
+            <span>Power BI</span>
+            <span>Microsoft Teams</span>
+            <span>Office 365</span>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <img src="../img/gmi.jpg" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>07/2023 – 12/2023</h3>
+          <h4>Technicien Supérieur</h4>
+          <p><strong> GMI Pneumatique</strong></p>
+          <!-- <p>Designed and implemented a media management application to streamline social media publication workflows for LinkedIn and Facebook. The solution included collaborative validation processes between team members and automated scheduling features.</p> -->
+          <ul class="accomplishments">
+            <li>  Réparation et entretien des compresseurs à vis et à piston,
+              ainsi que la réparation et entretien des vérins pneumatiques et
+              hydrauliques.</li>
+            <li>Installation de circuits d'air comprimé et de chambres des
+              compresseurs.
+              </li> 
+
+          </ul>
+          <!-- <div class="tech-tags">
+            <span>Power Apps</span>
+            <span>Power Automate</span>
+            <span>SharePoint</span>
+            <span>Power BI</span>
+            <span>Microsoft Teams</span>
+            <span>Office 365</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <br><br><br><br>
+    <h2>Mes Stages</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <img src="../img/spal.avif" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>06/2025 – 07/2025</h3>
+          <h4>Stage de perfectionnement de cycle d'ingénieurs</h4>
+          <p><strong> Société Parisienne d’Aluminium (SPAL) </strong></p>
+          <p>  Conception 3D de structures métalliques et menuiseries aluminium
+ (portes, fenêtres, garde-corps, etc.) sous SolidWorks et AutoCAD-Élaboration des mises en plans pour la fabrication et la pose-Prise en compte des normes techniques et des contraintes de
+ fabrication
+            </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <img src="../img/techno.jpg" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>06/2024 – 07/2024</h3>
+          <h4>Stage d'initiation de cycle d'ingénieur</h4>
+          <p><strong> Techno confort</strong></p>
+          <p> Conception de modèles en 3D de meubles et réalisation de plans 2D en utilisant le logiciel Solid-Works.
+            </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <img src="../img/mgsm.svg" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>02/2023 – 06/2023</h3>
+          <h4>Stage de fin d'étude</h4>
+          <p><strong> MGSM</strong></p>
+          <p> Etude et conception du Convoyeur Semi-Automatique
+            des Panneaux.
+            </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <img src="../img/cds.png" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>Février 2022</h3>
+          <h4>Stage perfectionnement</h4>
+          <p><strong> Les Couscousseries Du Sud</strong></p>
+          <p> Effectuer des tâches de maintenance en service électrique
+            et mécanique.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <img src="../img/COGITEL.png" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>Juillet 2021</h3>
+          <h4>Stage d'Initiation</h4>
+          <p><strong> COGITEL</strong></p>
+          <p> Effectuer des tâches de maintenance.</p>
+        </div>
+      </div>
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.getElementById('menu-icon');
+  const navList = document.getElementById('navlist');
+
+  if (menuIcon && navList) {
+    menuIcon.addEventListener('click', function() {
+      this.classList.toggle('bx-x');
+      navList.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    document.querySelectorAll('.navlist a').forEach(link => {
+      link.addEventListener('click', function() {
+        menuIcon.classList.remove('bx-x');
+        navList.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  }
+});
+
+
+// Empêcher le clic droit
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  
+});
+
+// Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
+document.addEventListener('keydown', (e) => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && e.key === 'I') || // Ctrl+Shift+I
+    (e.ctrlKey && e.shiftKey && e.key === 'J') || // Ctrl+Shift+J
+    (e.ctrlKey && e.key === 'U') // Ctrl+U (afficher le code source)
+  ) {
+    e.preventDefault();
+    
+  }
+});
+  </script>
+</body>
+</html>

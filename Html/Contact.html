@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Majdi Ghorbel</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../img/ME.png" type="image/x-icon">
+  <style>
+    :root {
+      --bg-color: #111;
+      --text-color: #fff;
+      --secondary-color: #ccc;
+      --main-color: #ff4d4d;
+      --box-color: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(17, 17, 17, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--main-color);
+    }
+
+    .navlist {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .navlist a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navlist a:hover,
+    .navlist .active-nav {
+      color: var(--main-color);
+    }
+
+    #menu-icon {
+      font-size: 2rem;
+      color: var(--text-color);
+      display: none;
+      cursor: pointer;
+    }
+
+    /* Contact Section */
+    section {
+      padding: 120px 7% 60px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: var(--main-color);
+      margin-bottom: 40px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--box-color);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--secondary-color);
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #222;
+      color: var(--text-color);
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border: 2px solid var(--main-color);
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: var(--main-color);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-submit-btn:hover {
+      background: #e63939;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navlist {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        background: var(--box-color);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        transition: left 0.3s;
+        padding: 20px 0;
+      }
+
+      .navlist.active {
+        left: 0;
+      }
+
+      #menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Portfoli<span>.O</span></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navlist" id="navlist">
+      <li><a href="../Html/home.html">Home</a></li>
+      <li><a href="../Html/About.html">A Propos</a></li>
+      <li><a href="../Html/Internships.html">Expériences</a></li>
+      <li><a href="../Html/Skills.html">Compétences</a></li>
+      <li><a href="../Html/Projects.html">Projets</a></li>
+      <li><a href="../Html/Interests.html">Intérêts</a></li>
+      <li><a href="../Html/Contact.html" class="active-nav">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <div class="form-container">
+      <form class="form">
+        <div class="form-group">
+          <label for="email">Votre Email</label>
+          <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="textarea">Votre Message</label>
+          <textarea id="textarea" name="textarea" rows="6" placeholder="Écrivez votre message ici..." required></textarea>
+        </div>
+        <button class="form-submit-btn" type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navList = document.getElementById('navlist');
+
+    menuIcon.addEventListener('click', () => {
+      menuIcon.classList.toggle('bx-x');
+      navList.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.navlist a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navList.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

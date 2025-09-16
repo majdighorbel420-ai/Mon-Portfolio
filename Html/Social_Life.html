@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Social Engagement - Scout Leader and Media Manager at Tunisian Scouts, IEEE member, event organizer">
+    <title>Portfolio | Majdi GHORBEL</title>
+    <link rel="stylesheet" href="../CSS/About.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="../img/ME.png" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .social-life {
+            padding: 120px 5% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-life h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .social-life h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--main-color);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--other-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .activity {
+            background: var(--second-bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--main-color);
+        }
+
+        .activity:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .activity-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .activity-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid var(--main-color);
+            box-shadow: 0 0 15px rgba(19, 187, 255, 0.2);
+        }
+
+        .activity-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .role-badge {
+            background: rgba(19, 187, 255, 0.1);
+            color: var(--main-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--main-color);
+        }
+
+        .activity-text p {
+            color: var(--other-color);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .activity-content {
+                flex-direction: column;
+            }
+
+            .activity-image {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-life {
+                padding: 100px 3% 60px;
+            }
+
+            .activity {
+                padding: 1.5rem;
+            }
+        }
+
+        .achievement-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(19, 187, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--main-color);
+}
+
+.achievement-highlight i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+.achievement-highlight span {
+    font-size: 0.95rem;
+    color: var(--other-color);
+}
+
+.achievement-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(19, 187, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--main-color);
+}
+
+.achievement-highlight i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+.achievement-highlight span {
+    font-size: 0.95rem;
+    color: var(--other-color);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfoli <span>.O</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navlist" id="navlist">
+            <li><a href="../Html/home.html" >Home</a></li>
+            <li><a href="../Html/About.html" class="active-nav">A Propos</a></li>
+            <li><a href="../Html/Internships.html">Expériences Professionnelles</a></li>
+            <li><a href="../Html/Skills.html">Compétences</a></li>
+            <li><a href="../Html/Projects.html">Projets</a></li>
+            <li><a href="../Html/Interests.html">Intérêts</a></li>
+            <li><a href="../Html/Social_Life.html" class="active-nav">Vie Sociale</a></li>
+        </ul>
+    </header>
+    <br>
+
+
+    <section class="social-life">
+        <div class="container">
+            <h1>Social Life</h1>
+
+
+            <!-- Tunisian Scouts -->
+            <div class="activity">
+                <div class="activity-content">
+                    <img src="../img/scouts-tunisians.jpg" alt="Tunisian Scouts" class="activity-image">
+                    <div class="activity-text">
+                        <h2>
+                            <i class='bx bx-group'></i> Tunisian Scouts
+                            <span class="role-badge">Scout Leader</span>
+                            <span class="role-badge">Media Manager</span>
+                        </h2>
+                        <p>Active member since 2018, I've progressed to leadership roles within the Tunisian Scouts. As both Scout Leader and Media Manager, I guide young members in scouting activities while overseeing digital communication strategies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IEEE Section -->
+            <div class="activity">
+                <div class="activity-content">
+                    <img src="../img/ieee-branch.jpg" alt="IEEE IIT" class="activity-image">
+                    <div class="activity-text">
+                        <h2>
+                            <i class='bx bx-chip'></i> IEEE IIT Student Branch
+                            <span class="role-badge">Organizing Team</span>
+                            <span class="role-badge">Member of the Month</span>
+                        </h2>
+                        <p>Active member of the organizing team for events at IEEE IIT. Recognized as "Member of the Month" for outstanding contributions and dedication to the Computer Society chapter.</p>
+                        
+                        <div class="achievement-highlight">
+                            <i class='bx bx-award'></i>
+                            <span>Honored as Member of the Month (March 2025) for remarkable efforts in IEEE CS activities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JPO ISIMS -->
+            <div class="activity">
+                <div class="activity-content">
+                    <img src="../img/jpo-isims.jpg" alt="ISIMS Open Day" class="activity-image">
+                    <div class="activity-text">
+                        <h2><i class='bx bx-calendar-event'></i> ISIMS Open Day 2023/2024 Organizer</h2>
+                        <p>Coordinated the planning and execution of the ISIMS Open Day event, welcoming prospective students and presenting academic programs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOS Village -->
+            <div class="activity">
+                <div class="activity-content">
+                    <img src="../img/sos-children-village.jpg" alt="SOS Children's Village" class="activity-image">
+                    <div class="activity-text">
+                        <h2><i class='bx bx-heart'></i> SOS Children's Village Ambassador</h2>
+                        <p>Member of the ambassador club for this organization dedicated to protecting and supporting vulnerable children.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MTC Club -->
+            <div class="activity">
+                <div class="activity-content">
+                    <img src="../img/mtc-club.jpg" alt="MTC Club" class="activity-image">
+                    <div class="activity-text">
+                        <h2><i class='bx bx-party'></i> MTC ISIMS Club</h2>
+                        <p>Active participant in organizing cultural events and student activities within this dynamic campus club.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.getElementById('menu-icon');
+  const navList = document.getElementById('navlist');
+
+  if (menuIcon && navList) {
+    menuIcon.addEventListener('click', function() {
+      this.classList.toggle('bx-x');
+      navList.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    document.querySelectorAll('.navlist a').forEach(link => {
+      link.addEventListener('click', function() {
+        menuIcon.classList.remove('bx-x');
+        navList.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  }
+});
+// Empêcher le clic droit
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  
+});
+
+// Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
+document.addEventListener('keydown', (e) => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && e.key === 'I') || // Ctrl+Shift+I
+    (e.ctrlKey && e.shiftKey && e.key === 'J') || // Ctrl+Shift+J
+    (e.ctrlKey && e.key === 'U') // Ctrl+U (afficher le code source)
+  ) {
+    e.preventDefault();
+    
+  }
+});
+    </script>
+</body>
+</html>
